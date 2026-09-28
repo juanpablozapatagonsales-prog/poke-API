@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    color: darkred;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.card img {
+    width: 150px;
+}
+
+.card h2 {
+    text-transform: capitalize;
+}
+
+.tipo {
+    background-color: gray;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin: 3px;
+    display: inline-block;
+}
+
+.habilidades {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades li {
+    display: inline-block;
+    background-color: pink;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.stat {
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.stat-nombre {
+    width: 100px;
+    text-align: left;
+}
+
+.barra {
+    flex: 1;
+    background-color: lightgray;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.relleno {
+    background-color: red;
+    height: 10px;
+}
+
+/* Mensajes */
+.mensaje {
+    color: gray;
+}
+
+.error {
+    color: red;
+}
