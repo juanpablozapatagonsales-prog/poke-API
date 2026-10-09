@@ -1,74 +1,26 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora la Pokédex: busca Pokémon por nombre o número y descubre sus tipos, habilidades, medidas y estadísticas.">
-    <meta name="application-name" content="Pokédex">
-    <meta name="robots" content="index, follow">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#f5f7fb">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_MX">
-    <meta property="og:title" content="Pokédex | Explora Pokémon">
-    <meta property="og:description" content="Busca Pokémon por nombre o número y descubre sus tipos, habilidades, medidas y estadísticas.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Pokédex | Explora Pokémon">
-    <meta name="twitter:description" content="Busca Pokémon por nombre o número y descubre sus tipos, habilidades, medidas y estadísticas.">
-    <title>Pokédex | Explora Pokémon</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Buscador Pokémon</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar container py-3" aria-label="Navegación principal">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="./" aria-label="Pokédex, inicio">
-                <span class="brand-icon" aria-hidden="true">✦</span>
-                Pokédex
-            </a>
-            <span class="header-caption d-none d-sm-inline">Tu próxima aventura empieza aquí</span>
-        </nav>
+    <header class="encabezado">
+        <h1>Pokédex</h1>
+        <p>Busca un Pokémon por nombre o por número</p>
     </header>
 
-    <main class="container page-content">
-        <section class="hero text-center" aria-labelledby="page-title">
-            <span class="hero-eyebrow">Explora. Descubre. Colecciona.</span>
-            <h1 id="page-title">Encuentra tu Pokémon</h1>
-            <p class="hero-description">Busca por nombre o número y conoce todo sobre tu compañero.</p>
+    <form id="formulario" class="buscador">
+        <input type="text" id="buscar" placeholder="Ej: pikachu o 25" required>
+        <button type="submit">Buscar</button>
+    </form>
 
-            <form id="formulario" class="search-form mx-auto" role="search">
-                <label class="visually-hidden" for="buscar">Nombre o número del Pokémon</label>
-                <input
-                    class="form-control form-control-lg"
-                    type="search"
-                    id="buscar"
-                    placeholder="Ej. Pikachu o 25"
-                    autocomplete="off"
-                    required
-                >
-                <button class="btn btn-primary btn-lg" type="submit">
-                    <span aria-hidden="true">⌕</span>
-                    Buscar
-                </button>
-            </form>
-            <p class="search-hint">Prueba con <span>Pikachu</span>, <span>Charizard</span> o <span>25</span></p>
-        </section>
-
-        <section id="resultado" class="result-area" aria-label="Resultado de búsqueda" aria-live="polite" aria-busy="false">
-            <div class="empty-state text-center">
-                <span class="empty-icon" aria-hidden="true">◉</span>
-                <h2>La Pokédex está lista</h2>
-                <p>Escribe un nombre o número para descubrir sus detalles.</p>
-            </div>
-        </section>
+    <main id="resultado">
+        <p class="mensaje">Escribe un nombre o un número para empezar 🔎</p>
     </main>
 
-    <footer class="site-footer text-center">
-        <p class="mb-0">Datos proporcionados por <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a></p>
-    </footer>
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
